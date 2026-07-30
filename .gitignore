@@ -1,0 +1,17 @@
+# Dependencias
+node_modules/
+
+# Builds de producción (Vite)
+dist/
+dist-ssr/
+
+# Archivos de sistema operativo y configuraciones locales
+.DS_Store
+.prettierrc
+.vscode/
+
+# Logs de errores
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+yarn-debug.log*

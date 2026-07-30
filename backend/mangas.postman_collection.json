@@ -1,0 +1,124 @@
+{
+	"info": {
+		"name": "Mangas API Parcial 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obtener todos los mangas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/api/mangas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"mangas"
+					]
+				}
+			}
+		},
+		{
+			"name": "Obtener manga por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/api/mangas/ID_DEL_MANGA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"mangas",
+						"ID_DEL_MANGA"
+					]
+				}
+			}
+		},
+		{
+			"name": "Crear nuevo manga",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"Ejemplo Manga\",\r\n    \"autor\": \"Autor Ejemplo\",\r\n    \"precio\": 1500\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3333/api/mangas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"mangas"
+					]
+				}
+			}
+		},
+		{
+			"name": "Editar manga (PUT)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"Manga Editado\",\r\n    \"autor\": \"Autor Editado\",\r\n    \"precio\": 2000\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3333/api/mangas/ID_DEL_MANGA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"mangas",
+						"ID_DEL_MANGA"
+					]
+				}
+			}
+		},
+		{
+			"name": "Eliminar manga",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/api/mangas/ID_DEL_MANGA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"mangas",
+						"ID_DEL_MANGA"
+					]
+				}
+			}
+		}
+	]
+}
