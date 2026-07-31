@@ -34,7 +34,7 @@ Para el finall seguií con la misma idea con la que venía del parcial anterior,
 - **Socket.io Client**
 - **React Toastify**
 - **JWT Decode**
-- **Vite PWA Plugin** (Soporte para Progressive Web App instalable)
+- **Vite PWA Plugin**
 
 ## Cómo correrlo
 
