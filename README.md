@@ -8,6 +8,7 @@ Para el finall seguií con la misma idea con la que venía del parcial anterior,
 - **Sistema de Roles:** Manejo de permisos medainte asignacion de roles, para separar usuarios comunes de administradores, restringiendo el acceso a los ABMs.
 - **ABMs Completos:** Gestión de mangas y autores desde el frontend. (El ABM de categorías, géneros y tipos está 100% funcional a nivel de la API/backend por ahora).
 - **Alertas en Tiempo Real:** Uso de WebSockets (Socket.io) para notificar instantáneamente a todos los usuarios conectados cuando hay actualizaciones en la plataforma.
+- **Progressive Web App (PWA):** La SPA está configurada para ser instalable en dispositivos móviles y computadoras de escritorio.
 
 ## Lo que instalé
 
@@ -33,6 +34,7 @@ Para el finall seguií con la misma idea con la que venía del parcial anterior,
 - **Socket.io Client**
 - **React Toastify**
 - **JWT Decode**
+- **Vite PWA Plugin** (Soporte para Progressive Web App instalable)
 
 ## Cómo correrlo
 
