@@ -12,7 +12,7 @@ export function useApi() {
       "Authorization": `Bearer ${token}`
     };
 
-    // Si no es FormData, lo pasamos como JSON
+    // Si no es FormData, lo paso como JSON para evitar que se rompa la subida de las portadas
     if (!isFormData) {
       headers["Content-Type"] = "application/json";
     }
