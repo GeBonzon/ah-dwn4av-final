@@ -31,10 +31,25 @@ export async function getMangas(filter = {}) {
         filterMongo.categoria = dbCategoria.nombre;
       }
     }
-    //Adaptar los toros filtros a usar slugs tmb
-    if (filter?.autor) filterMongo.autor = filter.autor;
-    if (filter?.genero) filterMongo.genero = filter.genero;
-    if (filter?.tipo) filterMongo.tipo = filter.tipo;
+    //Adapte los fitlros apra que permitan buscar por los slugs y asi evitar errores con nombres con acentos caracteres escpeciales y maysuculas. Tmabien hace mas facil probar los get en postman
+    if (filter?.autor) {
+      const dbAutor = await dbMangas.collection("autores").findOne({ slug: filter.autor });
+      if (dbAutor) {
+        filterMongo.autor = dbAutor.nombre;
+      }
+    }
+    if (filter?.genero) {
+      const dbGenero = await dbMangas.collection("generos").findOne({ slug: filter.genero });
+      if (dbGenero) {
+        filterMongo.genero = dbGenero.nombre;
+      }
+    }
+    if (filter?.tipo) {
+      const dbTipo = await dbMangas.collection("tipos").findOne({ slug: filter.tipo });
+      if (dbTipo) {
+        filterMongo.tipo = dbTipo.nombre;
+      }
+    }
 
     // Lo del error.message vi en al docuemtnacion que servia para obtener el nombre del error especfico demanera mas limpia lo cual lo use apra debuggear pq no me cargaba los mangas
     //https://nodejs.org/api/errors.html#errormessage

@@ -12,7 +12,6 @@ export const useAutores = () => {
     const { getAutores } = useAutoresService();
 
     const fetchAutores = () => {
-        setLoading(true);
         getAutores()
             .then(data => {
                 setAutores(data);

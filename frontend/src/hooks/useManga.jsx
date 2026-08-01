@@ -37,7 +37,6 @@ export const useMangas = (query = "") => {
     const { getMangas } = useMangasService()
 
     const fetchMangas = () => {
-        setLoading(true)
         getMangas(query)
             .then(data => {
                 setMangas(data)

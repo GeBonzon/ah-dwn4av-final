@@ -12,7 +12,7 @@ export function useApi() {
       "Authorization": `Bearer ${token}`
     };
 
-    // Si NO es FormData (es un objeto normal), le decimos que es JSON
+    // Si no es FormData, lo pasamos como JSON
     if (!isFormData) {
       headers["Content-Type"] = "application/json";
     }
